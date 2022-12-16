@@ -47,6 +47,8 @@ public class AnimesService {
 	}
 
 	public void atualiza(AnimePutDTO animePutDTO) {
+		Anime animePesquisa = buscaPorIdOuLancaException(animePutDTO.getId());
+		animePesquisa.setNome(animePutDTO.getNome());
 		repository.save(buscaPorIdOuLancaException(animePutDTO.getId()));
 	}
 

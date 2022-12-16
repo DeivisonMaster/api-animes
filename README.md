@@ -16,8 +16,8 @@ Proteção contra CSRF com gerenciamento de tokens entre cliente x servidor
 
 <br/>
 
-<h2>Testes Realizados</h2>
-<p>Testes de unidade do Controller - Testes de unidade nos Endpoints</p>
+<h2>Testes Realizados - Necessário habilitar banco h2 em application.properties</h2>
+<p>Testes de unidade do Controller - Testes de unidade nos Endpoints</p> 
 <p>Testes do Repositório - Validação dos métodos base do Spring Data JPA</p>
 <p>Testes de Integração - Simulação de client Rest Template solicitando recursos da API</p>
 
@@ -26,10 +26,7 @@ Proteção contra CSRF com gerenciamento de tokens entre cliente x servidor
 Executar o comando: mvn test 
 
 <br/>
-
-Perfil para Testes de Integração
 Executar o comando: mvn test -Ptestes-integracao
-
 <br/>
 
 ACESSO SWAGGER DOC:
