@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "f5256f6f-ab5d-4f12-91fb-43c1ed8b6ab7",
+		"name": "Animes API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7129537"
+	},
+	"item": [
+		{
+			"name": "Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/animes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"animes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/animes/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"animes",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incluir",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Naruto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/animes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"animes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/animes/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"animes",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"Digimon\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/animes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"animes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/animes/porNome?nome=Digimon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"animes",
+						"porNome"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Digimon"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inclui lista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"nome\": \"Naruto\"\r\n    },\r\n    {\r\n        \"nome\": \"DBZ\"\r\n    },\r\n     {\r\n        \"nome\": \"Grand Blue\"\r\n    },\r\n    {\r\n        \"nome\": \"Drifters\"\r\n    },\r\n     {\r\n        \"nome\": \"Overload\"\r\n    },\r\n    {\r\n        \"nome\": \"Berserk\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/animes/incluiLista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"animes",
+						"incluiLista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar por Filtros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/animes?size=2&sort=nome,asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"animes"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "2"
+						},
+						{
+							"key": "sort",
+							"value": "nome,asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Não Paginado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/animes/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"animes",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
